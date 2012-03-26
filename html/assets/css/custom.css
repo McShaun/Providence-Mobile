@@ -1,0 +1,21 @@
+/* @charset "utf-8"; */
+/* CSS Document */
+
+/* background */
+.ui-dialog.ui-overlay-c {
+	border: 1px solid #B3B3B3;
+	/* background:url(../images/page-backgrounds/diagonal-noise.jpg) 0 0; background-size: 100px 100px; */
+	/* background:url(../images/page-backgrounds/zebra.jpg) 0 0; background-size: 121px 38px; */
+	/* background:url(../images/page-backgrounds/paper.jpg) 0 0; background-size: 500px 593px;  */
+	/* background:url(../images/page-backgrounds/farmer.jpg) 0 0; background-size: 349px 349px; */
+	/* background:url(../images/page-backgrounds/blue-stripes.jpg) 0 0; background-size: 100px 100px; */
+	/* background:url(../images/page-backgrounds/texture.jpg) 0 0; background-size: 476px 476px; */
+	/* background:url(../images/page-backgrounds/white-brick-wall.jpg) 0 0; background-size: 25px 17px; */
+	/* background:url(../images/page-backgrounds/grilled.jpg) 0 0; background-size: 170px 180px;  */
+	/* background:url(../images/page-backgrounds/wood.jpg) 0 0; background-size: 203px 317px; */
+	background:url(../images/page-backgrounds/jp-wood.jpg) 0 0; background-size: 400px 400px;
+	color: #111;
+	text-shadow: 0 1px 0 #fff;
+}
+.ui-btn-up-c {background: #a1c0c6; }
+.flexslider { position: relative; background:#393a42; } /* SM */
