@@ -5,27 +5,31 @@
 	  <em>git commit -a</em>  # commits all local changes<br />git commit -m 'first commit'    <br />git remote add origin git@github.com:McShaun/Providence-Mobile.git    <br />git push -u origin master        </pre>
 <h2>Existing Git Repo?</h2>
 <pre>cd existing_git_repo    <br />git remote add origin git@github.com:McShaun/Providence-Mobile.git    <br />git push -u origin master        </pre>
-<h2>Importing a Subversion Repo?</h2>
-<pre>  <a href="http://help.github.com/import-from-subversion/">Check out the guide</a> for step by step instructions.        </pre>
+<h2>Tagging </h2>
+<pre>$ git tag -a v.1 -m 'version 1.4'  
+$ git tag  
+v0.1  
+v1.3  
+v1.4</pre>
 <h2>More:</h2>
 <pre>git log
 # let's you know who's updated most recently
-
+</pre>
 <h2>Branching</h2>
-  <pre>
-  git checkout -b new_feature<br />
+git checkout -b new_feature<br />
 Switched to a new  branch &quot;new_feature&quot;
 <p>git branch master<br />
 *new_feature</p>
-<p>git checkout master<br />
-Switched  to branch &quot;master&quot;</p>
-<p>git branch -d feature3<br />
+git checkout master<br />
+Switched  to branch &quot;master&quot;<br />
+<br />
+
+git branch -d feature3<br />
   Deleted branch feature3
-</p>
-<h2>Merginging</h2>
+
+<h2>Merging</h2>
 <p>git checkout master<br />
   Switched to branch &quot;master&quot;
 </p>
 <p>git merge new_feature </p>
-<p>&nbsp;</p>
 <pre>  <a href="https://github.com/McShaun/Providence-Mobile"></a></pre><a href="file:///C|/Users/shaun/.gitconfig"></a>
