@@ -18,7 +18,7 @@
     <script src="assets/contact/js/contact.js"></script>
     
     <!-- css -->
-   	<link rel="stylesheet" href="assets/css/style1.css">
+   	<link rel="stylesheet" href="assets/css/style-shaun.css">
 
 </head> 
 <body>
