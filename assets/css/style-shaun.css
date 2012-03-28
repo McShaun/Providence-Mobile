@@ -1823,7 +1823,7 @@ html[xmlns] .slides {display: block;}
 /* =============================================================================
    Custom content styling
    ========================================================================== */
-
+p.home-title {color: #444; text-align: center; }
 h3.home-title {
 	margin-top:40px; 
 	text-align:center; 
@@ -1835,8 +1835,10 @@ h3.home-title {
 	/* font-family: 'Cabin', sans-serif; font-weight: 700; font-size:22px; */
  	/* font-family: 'Cardo', serif; font-size:24px; */
  	/* font-family: 'Droid Sans', sans-serif; font-size:22px; font-weight:700  */
-	 font-family: 'Goudy Bookletter 1911', serif; font-size:28px; 
+	 font-family: 'Goudy Bookletter 1911', serif; font-size:18px; 
 }
+
+h3 a, h3.home-title a {text-decoration:none; color:#333;}
 
 .padd {
 	padding: 20px 0
