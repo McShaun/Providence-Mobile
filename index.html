@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<title>Providence Mobile</title> 
 	<link href="assets/images/ssn.ico" rel="shortcut icon" type="image/x-icon" />
-    
+	
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
     
     <!-- scripts -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script language="javascript" src="jquery.tweet.js" type="text/javascript"></script>
+	<script type='text/javascript'>
+    jQuery(function($){
+        $(".tweet").tweet({
+            username: "providencego",
+            join_text: "auto",
+            avatar_size: 32,
+            count: 1,
+            auto_join_text_default: "", 
+            auto_join_text_ed: "",
+            auto_join_text_ing: "",
+            auto_join_text_reply: "",
+            auto_join_text_url: "",
+            loading_text: "Loading Scripture...",
+			template: "{tweet_text_nolink}"
+        });
+    });
+</script>
 
     <!-- css -->
    	<link rel="stylesheet" href="assets/css/style-shaun.css">  
     <!-- gloss added by apple -->
-<link rel="apple-touch-icon" href="assets/images/icons/Icon.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/Icon-72.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/Icon@2x.png" /> 
+	<link rel="apple-touch-icon" href="assets/images/icons/Icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/Icon-72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/Icon@2x.png" /> 
 
-<link rel="apple-touch-startup-image" href="assets/images/icons/launch-image.jpg">
+	<link rel="apple-touch-startup-image" href="assets/images/icons/launch-image.jpg">	
    
 </head> 
 <body>
@@ -73,9 +91,7 @@
   	<div data-role="content" >
   	
     <hr class="ornamental"/>
-    <!-- Hey Garrett - Here is the place we want to display the most recent title and scripture tweet. You can replace my hardcoded version here -->
-  		<h3 class="home-title"><a href="title-scriptures.html" data-prefetch data-transition="flip" style="font-weight:bold; color: #300;"><strong>Just Diligently Go on Your Own Way </strong></a></h3>
-  		<p class="home-title">Genesis 18:20-33, Gen 19:1-28, Exodus 14</p>
+		<div class="tweet"></div>
 	<hr class="ornamental"/>
 
 		<!-- navigation -->
