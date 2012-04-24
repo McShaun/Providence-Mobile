@@ -227,7 +227,7 @@
 
           var tweets = $.map(data.results || data, extract_template_data);
           tweets = $.grep(tweets, s.filter).sort(s.comparator).slice(0, s.count);
-          list.append($.map(tweets, function(o) { return "<li>" + t(s.template, o) + "</li>"; }).join('')).
+          list.append($.map(tweets, function(o) { return "" + t(s.template, o) + ""; }).join('')).
               children('li:first').addClass('tweet_first').end().
               children('li:odd').addClass('tweet_even').end().
               children('li:even').addClass('tweet_odd');
