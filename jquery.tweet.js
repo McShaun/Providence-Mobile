@@ -191,7 +191,7 @@
       o.tweet_relative_time = relative_time(o.tweet_time);
       o.entities = item.entities ? (item.entities.urls || []).concat(item.entities.media || []) : [];
       o.tweet_raw_text = o.retweet ? ('RT @'+o.retweeted_screen_name+' '+item.retweeted_status.text) : item.text; // avoid '...' in long retweets
-	  o.tweet_text_nolink = "<h1>" + "<p style=\"text-align: center;\">" + o.tweet_raw_text.slice(0, o.tweet_raw_text.search('http://')) + "</p></h1>";
+	  o.tweet_text_nolink = "<h3 class = \"home-title\">" + "<p style=\"text-align: center;\">" + o.tweet_raw_text.slice(0, o.tweet_raw_text.search('http://')) + "</p></h3>";
       o.tweet_text = $([linkURLs(o.tweet_raw_text, o.entities)]).linkUser().linkHash()[0];
       o.tweet_text_fancy = $([o.tweet_text]).makeHeart()[0];
 
