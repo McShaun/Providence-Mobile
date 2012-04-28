@@ -1726,9 +1726,9 @@ ul.tweetList{
 .tweet {
 	padding: 15px 20px;
 	color:#FFF;
-	border-bottom:1px solid #000000;
+	/* border-bottom:1px solid #000000;
 	border-top:1px solid #353434;
-	text-shadow: 0 1px 0 #000;
+	text-shadow: 0 1px 0 #000;  */
 	margin: 0 10px;
 	font-size:13px
 }
