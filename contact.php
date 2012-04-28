@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>Mobilize</title> 
+	<title>Providence Mobile</title> 
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
     
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,7 +35,7 @@
     
 	<!-- banner & title -->
 	<div class="bannerContainer">
-		<img src="assets/images/headers/1.jpg" class="banner">	
+		<img src="assets/images/headers/wmd.jpg" class="banner">	
     </div>
   	<h2 class="pageTitle"><span>Contact Us</span></h2>
 	<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
