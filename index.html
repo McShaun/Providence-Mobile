@@ -13,23 +13,6 @@
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
 	<script language="javascript" src="jquery.tweet.js" type="text/javascript"></script>
-	<script type='text/javascript'>
-    jQuery(function($){
-        $(".tweet").tweet({
-            username: "providencego",
-            join_text: "auto",
-            avatar_size: 32,
-            count: 1,
-            auto_join_text_default: "", 
-            auto_join_text_ed: "",
-            auto_join_text_ing: "",
-            auto_join_text_reply: "",
-            auto_join_text_url: "",
-            loading_text: "Loading Title...",
-			template: "{tweet_text_nolink}"
-        });
-    });
-</script>
 
     <!-- css -->
    	<link rel="stylesheet" href="assets/css/style-shaun.css">  
@@ -54,6 +37,19 @@
 				  animation: "slide",
 				  controlsContainer: ".flex-container"
 			  });
+				$(".tweet").tweet({
+					username: "providencego",
+					join_text: "auto",
+					avatar_size: 32,
+					count: 1,
+					auto_join_text_default: "", 
+					auto_join_text_ed: "",
+					auto_join_text_ing: "",
+					auto_join_text_reply: "",
+					auto_join_text_url: "",
+					loading_text: "Loading Title...",
+					template: "{tweet_text_nolink}"
+				});
 			});
 		</script>
        
