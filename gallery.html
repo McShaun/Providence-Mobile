@@ -11,13 +11,17 @@
     <!-- scripts -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-    <script src="assets/portfolio/lib/klass.min.js"></script>
-	<script src="assets/portfolio/code.photoswipe.jquery-3.0.4.min.js"></script>
     
     <!-- css -->
    	<link rel="stylesheet" href="assets/css/style-shaun.css">
+</head>
+
+<body>
+<!-- gallery 1 -->
+<div data-role="page" data-add-back-btn="true" id="Gallery1" class="gallery-page">
     <link rel="stylesheet" href="assets/portfolio/photoswipe.css">
-	
+    <script src="assets/portfolio/lib/klass.min.js"></script>
+	<script src="assets/portfolio/code.photoswipe.jquery-3.0.4.min.js"></script>
 	<script type="text/javascript">
 		(function(window, $, PhotoSwipe){
 			$(document).ready(function(){
@@ -44,13 +48,6 @@
 			});
 		}(window, window.jQuery, window.Code.PhotoSwipe));
 	</script>
-	
-</head>
-
-<body>
-<!-- gallery 1 -->
-<div data-role="page" data-add-back-btn="true" id="Gallery1" class="gallery-page">
-
 	<div data-role="header"  class="page-header">
     <a href="index.html" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" data-rel="back" rel="external">Back</a>
 		<h1>Photo Gallery</h1>
