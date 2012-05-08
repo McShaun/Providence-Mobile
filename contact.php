@@ -123,7 +123,7 @@
 	</div>
     
     <!-- footer -->
-	<div data-role="footer">
+	<!-- <div data-role="footer">
 		<div data-role="navbar" class="custom-icons" data-grid="c"  data-position="fixed">
 			<ul>
 				<li><a href="http://bit.ly/yx2mXZ" id="map" data-icon="custom" data-theme="b">Directions</a></li>
