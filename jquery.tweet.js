@@ -194,8 +194,14 @@
 	  o.tweet_text_nolink =  + o.tweet_raw_text + "</h3>"
       o.tweet_text = $([linkURLs(o.tweet_raw_text, o.entities)]).linkUser().linkHash()[0];
 	  //o.tweet_text = "<h3 class = \"home-title\">" + o.tweet_text;
+	  if(o.tweet_text.indexOf("<a href") != -1){
 	  o.tweet_text = "<h3 class = \"home-title\">" + o.tweet_text.slice(0, o.tweet_text.indexOf("<a href")) + "</h3><p style=\"text-align:center\"> Title and Scripture: " + o.tweet_text.slice(o.tweet_text.indexOf("<a href")) + "</p>";
-      o.tweet_text_fancy = $([o.tweet_text]).makeHeart()[0];
+      }
+	  else{
+		o.tweet_text = "<h3 class = \"home-title\">" + o.tweet_text + "</h3>";
+	  }
+	 
+	  o.tweet_text_fancy = $([o.tweet_text]).makeHeart()[0];
 
       // Default spans, and pre-formatted blocks for common layouts
       o.user = t('<a class="tweet_user" href="{user_url}">{screen_name}</a>', o);
