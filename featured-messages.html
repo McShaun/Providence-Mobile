@@ -10,7 +10,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- scripts -->
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
     
     <!-- css -->
@@ -22,10 +22,10 @@
 <div data-role="page">
     
     <!-- header -->
-	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a href="index.html" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" data-rel="back" rel="external">Back</a>
+	<div data-role="header" class="page-header" >
+    	<a href="index.html" data-icon="arrow-l" data-iconpos="notext" rel="external">Back</a>
     		<div class="logo"></div>
-    	<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
+    	<a href="index.html" data-icon="home" data-iconpos="notext" rel="external" class="ui-btn-right">Home</a>
 	</div>
     <!--/header -->
     
@@ -48,7 +48,7 @@
     <div class="padd"> 
 	<div class="thumbnail-list">        
         
-	<ul  data-filter-placeholder="Search..." data-inset="true" data-filter="true" data-role="listview" data-filter-theme="b" >
+	<ul data-inset="true" data-role="listview" >
 
 		<li class="ui-btn-icon-right"> 
 			<div class="ui-btn-inner ui-li">
@@ -75,13 +75,13 @@
 		<li class="ui-btn-icon-right">
 			<div class="ui-btn-inner ui-li" aria-hidden="true">
 				<div class="ui-btn-text" style="background:url(assets/images/pattern3.png) #69898f; background-size: 20px 20px;">
-					<a class="ui-link-inherit" data-prefetch href="http://www.biblestudyinteractive.com/praise/proverbs.html">
+					<a class="ui-link-inherit" data-prefetch data-transition="none" href="proverbs.html">
 						<img class="ui-li-thumb" src="assets/images/demo/thumbs/thumb3.jpg">
 							<h3 class="ui-li-heading">Proverbs</h3>
 								<p class="ui-li-desc">Within his prayerful life, Pastor Joshua realized many things. This is but a small collection of the some 40,000 proverbs he has written.</p>
 					</a>				</div>
             <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>			</div>
-		</li
+		</li>
 		</ul>
         
 
