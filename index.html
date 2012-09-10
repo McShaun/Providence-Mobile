@@ -1,60 +1,44 @@
 <!DOCTYPE html> 
 <html> 
 <head>
+	<title>Providence Mobile</title> 
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>Providence Mobile</title> 
-	<link href="assets/images/ssn.ico" rel="shortcut icon" type="image/x-icon" />
-	<link href="jquery.tweet.css" media="all" rel="stylesheet" type="text/css"/>
-	
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-    
+	
     <!-- scripts -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-	<script language="javascript" src="jquery.tweet.js" type="text/javascript"></script>
-
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+	<script src="assets/js/back.js"></script>
+    <script src="assets/portfolio/lib/klass.min.js"></script>
+	<script src="assets/portfolio/code.photoswipe.jquery-3.0.4.min.js"></script>
+	<script src="assets/slider/jquery.flexslider-min.js"></script>
+	<script src="assets/js/jquery.tweet.js"></script>
+	<script src="assets/js/init.js" type="text/javascript" />
+	<script type="text/javascript">
+		if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
+			document.write('<link rel="stylesheet" href="assets\/add-bubble\/style\/add2home.css">');
+			document.write('<script type="application\/javascript" src="assets\/add-bubble\/src\/add2home.js" charset="utf-8"><\/s' + 'cript>');
+		}
+	</script>
+	
     <!-- css -->
-   	<link rel="stylesheet" href="assets/css/style-shaun.css">  
+   	<link rel="stylesheet" href="assets/css/style-shaun.css"> 
+	<link href="assets/images/ssn.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="assets/css/jquery.tweet.css" media="all" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="assets/portfolio/photoswipe.css">
+	
     <!-- gloss added by apple -->
 	<link rel="apple-touch-icon" href="assets/images/icons/Icon.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/Icon-72.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/Icon@2x.png" /> 
-
 	<link rel="apple-touch-startup-image" href="assets/images/icons/launch-image.jpg">	
    
 </head> 
 <body>
-
-<div data-role="page" data-cache="never">
-
-<script src="assets/js/back.js"></script>
-<!-- slider -->
-<script src="assets/slider/jquery.flexslider-min.js"></script>
-	<script type="text/javascript">
-			$(document).ready(function() {
-				$('.flexslider').flexslider({
-				  animation: "slide",
-				  controlsContainer: ".flex-container"
-			  });
-				$(".tweet").tweet({
-					username: "providencego",
-					join_text: "auto",
-					avatar_size: 32,
-					count: 1,
-					auto_join_text_default: "", 
-					auto_join_text_ed: "",
-					auto_join_text_ing: "",
-					auto_join_text_reply: "",
-					auto_join_text_url: "",
-					loading_text: "Loading Title...",
-					template: "{tweet_text}"
-				});
-			});
-		</script>
-       
-<!-- /slider -->
+<div data-role="page" id="index">
     
     <!-- header -->
 	<div data-role="header" class="page-header">
@@ -92,64 +76,794 @@
 
 		<!-- navigation -->
 		<ul data-role="listview" data-inset="true" id="listview" style="margin-bottom:0px">
-			 
-			<li><a href="portfolio.html" id="brush" data-icon="custom" data-theme="b" data-prefetch data-transition="flip">Photo Gallery</a></li>
-    		<li><a href="songs.html" data-prefetch data-transition="slide">Praise</a></li>
-            <li><a href="featured-messages.html" data-transition="flip" data-prefetch>Featured Messages</a></li>
-            <li><a href="about.html" data-prefetch data-transition="flip">About</a></li>
-            <li><a href="contact.php" data-prefetch>Contact Us</a></li>
+			<li><a href="#portfolio" data-prefetch data-transition="none">Photo Gallery</a></li>
+    		<li><a href="#songs" data-prefetch data-transition="none">Praise</a></li>
+            <li><a href="#messages" data-prefetch data-transition="none" >Featured Messages</a></li>
+            <li><a href="#about" data-prefetch data-transition="none">About</a></li>
+            <li><a href="contact.php" data-prefetch data-transition="none">Contact Us</a></li>
         </ul>
-        
         <div class="shadow2box"><img src="assets/images/shadow2.png" class="shadow2" alt="shadow"></div>
         <!-- /navigation -->  
-	
-    
-    <p>This app is currently in development. Please excuse any broken links. If you have any suggestions for the app please send them to <a href="mailto:admin@gospelofprovidence.com">admin@gospelofprovidence.com</a>. Thanks!</p>
-	
-
-	<!-- social 
-    <div class="social">
-    	<a href="http://on.fb.me/x0BFYB"><img src="assets/images/social/fb-b.png" alt="facebook"></a>
-    	<a href="http://twitter.com/beantowndesign"><img src="assets/images/social/twitter2-b.png" alt="twitter"></a>
-    	<a href="#"><img src="assets/images/social/linkedin-b.png" alt="linkedin"></a>
-    	<a href="#"><img src="assets/images/social/dribble-b.png" alt="dribble"></a>
-    	<a href="#"><img src="assets/images/social/wordpress-b.png" alt="wordpress"></a>
-    </div>
-    -->
-    <!-- /social -->
-
-    
   </div>
-  <!-- /main content -->    
-    
-    <!-- footer 
-	<div data-role="footer">
-		<div data-role="navbar" class="custom-icons" data-grid="c"  data-position="fixed">
-			<ul>
-				<li><a href="http://bit.ly/yx2mXZ" id="footprints" data-icon="custom" data-theme="b">Directions</a></li>
-				<li><a href="tel:18005551234" id="cell" data-icon="custom" data-theme="b">Call Us</a></li>
-				<li><a href="portfolio.html" id="brush" data-icon="custom" data-theme="b" data-ajax="false">Portfolio</a></li>
-				<li><a href="twitter.html" id="twitter" data-icon="custom" data-theme="b" data-ajax="false">Tweets</a></li>
-			</ul>
-		</div>
-       
-	</div>
-    
-	 /footer -->
-    
 </div><!-- /page -->
 
+<div data-role="page" id="portfolio">
+    <!-- header -->
+	<div data-role="header" class="page-header">
+    	<a href="#index" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse">Back</a>
+    		<div class="logo"></div>
+    	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse"  class="ui-btn-right">Home</a>
+	</div>
+    <!--/header -->
 
-<!-- SCRIPTS -->
+	<!-- banner & title -->
+	<div class="bannerContainer">
+		<img src="assets/images/headers/wmd.jpg" class="banner">	
+    </div>
+  	<h2 class="pageTitle"><span>Photo Gallery</span></h2>
+	<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
+	<!-- /banner & title -->
+    
+    <div data-role="content">
+		<p>These are photos of the teacher and founder of Providence Church, 
+		some of his art, a couple different churches in America, as well as 
+		some photos of the "Natural Temple" of Weolmyeongdong. Enjoy ~</em></p>	
+		<ul data-role="listview" data-inset="false">
+			<li><a href="#gallery" data-prefetch data-transistion="none">View the Gallery</a></li> 
+		</ul> 
+		</div>	
+</div>
 
-<!-- add to homepage bubble on iphone, ipad  -->
-<script type="text/javascript">
-	if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
-		document.write('<link rel="stylesheet" href="assets\/add-bubble\/style\/add2home.css">');
-		document.write('<script type="application\/javascript" src="assets\/add-bubble\/src\/add2home.js" charset="utf-8"><\/s' + 'cript>');
-	}
-</script>
-<!-- /add to homepage bubble on iphone, ipad  --> 
+<div data-role="page" id="gallery" class="gallery-page">
+
+<div data-role="header"  class="page-header">
+    <a href="#portfolio" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse">Back</a>
+		<h1>Photo Gallery</h1>
+	</div>
+
+	<div data-role="content">
+		<ul class="gallery">
+			<li><a href="assets/portfolio/images/full/01-ssn_rev.jpg" rel="external"><img src="assets/portfolio/images/thumb/01-ssn_rev.jpg" alt="Our teacher - the founder of Providence Church" /></a></li>
+			<li><a href="assets/portfolio/images/full/02-ssn_soccer.jpg" rel="external"><img src="assets/portfolio/images/thumb/02-ssn_soccer.jpg" alt="Playing soccer and touring Europe in 1999" /></a></li>
+            <li><a href="assets/portfolio/images/full/03-ssn_mom.jpg" rel="external"><img src="assets/portfolio/images/thumb/03-ssn_mom.jpg" alt="Seonsangnim visiting with his mother" /></a></li>
+			<li><a href="assets/portfolio/images/full/04-ssn_vietnam.png" rel="external"><img src="assets/portfolio/images/thumb/04-ssn_vietnam.jpg" alt="Serving in the Vietnam War on behalf of Korea" /></a></li>
+            <li><a href="assets/portfolio/images/full/05-ssn_poster_blue.jpg" rel="external"><img src="assets/portfolio/images/thumb/05-ssn_poster_blue.jpg" alt="Poster Art" /></a></li>
+			<li><a href="assets/portfolio/images/full/06-ssn_poster_jesus.jpg" rel="external"><img src="assets/portfolio/images/thumb/06-ssn_poster_jesus.jpg" alt="Poster Art - The tearful prayer of the righteous while following the painful path of the Lord." /></a></li>
+            <li><a href="assets/portfolio/images/full/07-jesus.jpg" rel="external"><img src="assets/portfolio/images/thumb/07-jesus.jpg" alt="The Holy Son Jesus Christ" /></a></li>
+			<li><a href="assets/portfolio/images/full/ssn_art.jpg" rel="external"><img src="assets/portfolio/images/thumb/ssn_art.jpg" alt="Tree painting by Seonsangnim (teacher)" /></a></li>
+			<li><a href="assets/portfolio/images/full/ssn_art2.jpg" rel="external"><img src="assets/portfolio/images/thumb/ssn_art2.jpg" alt="More tree art. 'Each turn of the trunk is caused by the tribulations of nature making the tree nature's masterpiece.'" /></a></li>
+			<li><a href="assets/portfolio/images/full/ssn_art3.jpg" rel="external"><img src="assets/portfolio/images/thumb/ssn_art3.jpg" alt="The teachers's world-famous calligraphy" /></a></li>
+			<li><a href="assets/portfolio/images/full/ssn_art4.jpg" rel="external"><img src="assets/portfolio/images/thumb/ssn_art4.jpg" alt="Famous stork art featured in the South American Art Exhibit of the teacher's stork/snail paintings." /></a></li>
+			<li><a href="assets/portfolio/images/full/ssn_art5.jpg" rel="external"><img src="assets/portfolio/images/thumb/ssn_art5.jpg" alt="'Never changing heart'" /></a></li>
+			<li><a href="assets/portfolio/images/full/ssn_art6.jpg" rel="external"><img src="assets/portfolio/images/thumb/ssn_art6.jpg" alt="'The Righeous Person'" /></a></li>
+			<li><a href="assets/portfolio/images/full/us_ca.jpg" rel="external"><img src="assets/portfolio/images/thumb/us_ca.jpg" alt="Members of a church in California" /></a></li>
+			<li><a href="assets/portfolio/images/full/us_hawaii.jpg" rel="external"><img src="assets/portfolio/images/thumb/us_hawaii.jpg" alt="Members of the church in Hawaii" /></a></li>
+			<li><a href="assets/portfolio/images/full/us_houston.jpg" rel="external"><img src="assets/portfolio/images/thumb/us_houston.jpg" alt="Members of one of the churches in Texas" /></a></li>
+			<li><a href="assets/portfolio/images/full/us_houston2.jpg" rel="external"><img src="assets/portfolio/images/thumb/us_houston2.jpg" alt="Houston, TX" /></a></li>
+			<li><a href="assets/portfolio/images/full/us_newyork.jpg" rel="external"><img src="assets/portfolio/images/thumb/us_newyork.jpg" alt="Members of the church in Manhattan, NY" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd.jpg" alt="Wolmyungdong valley - the place where the teacher was born - Now a world renowned Natural Temple" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_ambition.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_ambition.jpg" alt="The Ambition Rock Stadium." /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_autumn.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_autumn.jpg" alt="The Gazebo" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_autumn_well.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_autumn_well.jpg" alt="Yaksoo - The natural medicinal spring water" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_autumn3.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_autumn3.jpg" alt="The ambition portion and the soccer field" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_autumn4.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_autumn4.jpg" alt="Wolmyungdong in the Autumn" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_autumn5.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_autumn5.jpg" alt="One of the many hiking trails" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_autumn6.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_autumn6.jpg" alt="Near the Wolmyungdong Museum & church" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_autumn7.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_autumn7.jpg" alt="Wolmyungdong in the Autumn" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_center.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_center.jpg" alt="The church in Wolmyungdong" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_center_praise1.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_center_praise1.jpg" alt="Worship Performance" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_center_praise2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_center_praise2.jpg" alt="Worship through dance" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_center3.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_center3.jpg" alt="Summer Retreats in Wolmyungdong held each year" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_cherryblossom.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_cherryblossom.jpg" alt="Cherry Blossoms" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_cherryblossom2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_cherryblossom2.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_daedun.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_daedun.jpg" alt="Eagle Rock where the teacher used to pray in the mountains of Mt. Daedun" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_daedun2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_daedun2.jpg" alt="The legendary gate of Mt. Daedun" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_daedun3.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_daedun3.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_daedun5.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_daedun5.jpg" alt="Mt. Daedun surrounds the Wolmyungdong Valley where the teacher grew up." /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_jesus.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_jesus.jpg" alt="Jah yeon seong jeon - The Natural Temple, and first statue of Jesus." /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_jesus_bronze.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_jesus_bronze.jpg" alt="2nd statue of Jesus made from bronze" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_jesus_bronze2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_jesus_bronze2.jpg" alt="Construction on another rock structure" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_jesus2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_jesus2.jpg" alt="Wolmyungdong in the morning" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_rock.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_rock.jpg" alt="One of the many rock masterpieces in Wolmyungdong" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_rock2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_rock2.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_rocks.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_rocks.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_summer.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_summer.jpg" alt="Summertime hiking during one of the young peoples' summer retreats" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_summer2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_summer2.jpg" alt="Children's celebration in Wolmyungdong" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_summer5.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_summer5.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_summer6.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_summer6.jpg" alt="Wolmyungdong converted to water park" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_summer7.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_summer7.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_water.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_water.jpg" alt="One of the pine tree masterpieces overlooking the Gazebo" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter.jpg" alt="Wolmyungdong in Winter" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter_sled.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter_sled.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter_sled2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter_sled2.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter_xmas.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter_xmas.jpg" alt="Christmas in Wolmyundong!" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter_xmas2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter_xmas2.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter_xmas3.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter_xmas3.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter2.jpg" alt="Prayer at the lawn in winter" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter3.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter3.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter5.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter5.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter6.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter6.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd_winter7.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd_winter7.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd2.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd2.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd3.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd3.jpg" alt="" /></a></li>
+			<li><a href="assets/portfolio/images/full/wmd4.jpg" rel="external"><img src="assets/portfolio/images/thumb/wmd4.jpg" alt="" /></a></li>
+		</ul>  
+        <p class="gal-description">Click an image to enlarge.</p>	
+	</div>
+</div>
+
+<div data-role="page" id="messages">
+
+    <!-- header -->
+	<div data-role="header" class="page-header" data-add-back-btn="true">
+    	<a href="#index" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse">Back</a>
+    		<div class="logo"></div>
+    	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right">Home</a>
+	</div>
+    <!--/header -->
+    
+	<!-- banner & title -->
+	<div class="bannerContainer">
+		<img src="assets/images/headers/header-ssn.jpg" class="banner">	
+    </div>
+  	<h2 class="pageTitle"><span>E-Sermons</span></h2>
+	<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
+	<!-- /banner & title -->
+    
+    <!-- main content -->
+    <div data-role="content">
+	<p>This is a small collection of featured messages from Providence church. 
+	They are perfect for sharing with newcomers who are already familiar with the teacher. 
+	In each "e-sermon" you will find a compilation of excerpts, keypoints, and sermon 
+	resource videos from translations of the sermons given in Providence Churches all over the world.</p>
+    <!-- list begins -->  
+    <div class="padd"> 
+	<div class="thumbnail-list">        
+	<ul  data-filter-placeholder="Search..." data-inset="true" data-filter="true" data-role="listview" data-filter-theme="b" >
+		<li class="ui-btn-icon-right"> 
+			<div class="ui-btn-inner ui-li">
+				<div class="ui-btn-text" style="background:url(assets/images/pattern3.png) #69898f; background-size: 20px 20px;">
+					<a class="ui-link-inherit" href="http://www.biblestudyinteractive.com/msg/counsel/" target="new">
+						<img class="ui-li-thumb" src="assets/images/demo/thumbs/thumb1.jpg">
+							<h3 class="ui-li-heading">"Counseling on Issues in Life with the Lord."</h3>
+								<p class="ui-li-desc">See how Jesus' solves the problems of life. Contained within this message are the stories of the Samartian woman and the apostle Peter.</p>
+					</a>				</div>
+            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>			</div>
+		</li>
+
+		<li class="ui-btn-icon-right">
+			<div class="ui-btn-inner ui-li" aria-hidden="true">
+				<div class="ui-btn-text" style="background:url(assets/images/pattern3.png) #69898f; background-size: 20px 20px;">
+					<a class="ui-link-inherit" href="http://www.biblestudyinteractive.com/msg/genes/" target="new">
+						<img class="ui-li-thumb" src="assets/images/demo/thumbs/thumb2.jpg">
+							<h3 class="ui-li-heading">The parable of genes</h3>
+								<p class="ui-li-desc">This message is titled, "You Take Heaven by Force through Truth and Love, and Faith and Action." It includes a very interesting analagy between faith and chromosomes.</p>
+							</a>				</div>
+            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>			</div>
+		</li>
+
+		<li class="ui-btn-icon-right">
+			<div class="ui-btn-inner ui-li" aria-hidden="true">
+				<div class="ui-btn-text" style="background:url(assets/images/pattern3.png) #69898f; background-size: 20px 20px;">
+					<a class="ui-link-inherit" data-prefetch href="#proverbs">
+						<img class="ui-li-thumb" src="assets/images/demo/thumbs/thumb3.jpg">
+							<h3 class="ui-li-heading">Proverbs</h3>
+								<p class="ui-li-desc">Within his prayerful life, Pastor Joshua realized many things. This is but a small collection of the some 40,000 proverbs he has written.</p>
+					</a>				</div>
+            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>			</div>
+		</li>
+		</ul>
+        
+
+	</div>
+    </div>
+    <!-- list ends -->
+
+     
+  </div><!-- /content -->	
+</div><!-- /page -->
+
+<div data-role="page" id="songs">
+    <!-- header -->
+	<div data-role="header" class="page-header" data-add-back-btn="true">
+    	<a href="#index" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse">Back</a>
+    		<div class="logo"></div>
+    	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right">Home</a>
+	</div>
+    <!--/header -->
+    
+	<!-- banner & title -->
+	<div class="bannerContainer">
+		<img src="assets/images/headers/header-praise.jpg" class="banner">	
+    </div>
+  	<h2 class="pageTitle"><span>Song Book</span></h2>
+	<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
+	<!-- /banner & title -->
+    
+    <!-- main content -->
+    <div data-role="content">
+    	
+	<p>Giving glory to God with the new songs of Providence!</p>
+    <p>Every Song with a * includes an embedded mp3 file</p>
+    <p>For any corrections please email <a href="mailto:admin@gospelofprovidence.com">admin@gospelofprovidence.com</a></p>
+    
+	<!-- list begins -->
+	<div class="padd">
+
+		<ul class="ui-listview" data-filter-theme="b" data-filter-placeholder="Search..." data-filter="true" data-role="listview" data-inset="true">
+            <li data-role="list-divider" role="heading">A</li>
+				<li><a id="a" href="song-a-grain.html" data-transition="slide">A Grain of Wheat</a></li>
+                <li><a href="song-a-h.html" data-transition="slide">A heart like thine</a></li>
+                <li><a href="song-a-adoration.html" data-transition="slide">Adoration</a></li>
+                <li><a href="song-a-ahhistoryofprovidence.html" data-transition="slide">Ah History of Providence</a></li>
+                <li><a href="song-a-all.html" data-transition="slide">All that I so adore</a></li>
+                <li><a href="song-a-aletter.html" data-transition="slide">A Letter Written Above the Clouds</a></li>
+                <li><a href="song-a-al.html" data-transition="slide">A love until the end of time</a></li>
+                <li><a href="song-a-alw.html" data-transition="slide">Always with the Lord</a></li>
+                <li><a href="song-a-ang.html" data-transition="slide">Angels we have heard on high</a></li>
+                <li><a href="song-a-ant.html" data-transition="slide">Anthem of Providence</a></li>
+                <li><a href="song-a-asthedear.html" data-transition="slide">As the deer</a></li>
+                <li><a href="song-a-ast.html" data-transition="slide">As the Waters Cover the Sea</a></li>
+                <li><a href="song-a-astheword.html" data-transition="slide">As the word of the Lord</a></li>
+				
+            <li data-role="list-divider" role="heading">B</li>
+				<li><a href="song-b-blessing.html" data-transition="slide">Blessing</a></li>
+                <li><a href="song-b-blind.html" data-transition="slide">Blind Love *</a></li>
+            <li data-role="list-divider" role="heading">C</li>
+                <li><a href="song-c-cheer.html" data-transition="slide">Cheer song</a></li>
+                <li><a href="song-c-xmas2.html" data-transition="slide">Christmas Bells (Christmas II)</a></li>
+                <li><a href="song-c-closetojesus.html" data-transition="slide">Close to Jesus</a></li>
+                <li><a href="song-c-closetothelord.html" data-transition="slide">Close to the Lord</a></li>
+                <li><a href="song-c-comedownonmeholyspirit.html" data-transition="slide">Come Down Holy Spirit</a></li>
+                <li><a href="song-c-cometoknowthenewhistory.html" data-transition="slide">Come to the New History</a></li>
+				
+            <li data-role="list-divider" role="heading">E</li>
+                <li><a href="song-e-evergreen.html" data-transition="slide">Evergreen</a></li>
+                <li><a href="song-e-everlastinglove.html" data-transition="slide">Everlasting Love</a></li>
+                <li><a href="song-e-everymoveimake.html" data-transition="slide">Every move I make</a></li>
+				
+            <li data-role="list-divider" role="heading">F</li>
+            	<li><a href="song-f-forevermylord.html" data-transition="slide">Forever my Lord</a></li>
+            	<li><a href="song-f-fragranceofprovidence.html" data-transition="slide">Fragrance of Providence</a></li>
+				
+            <li data-role="list-divider" role="heading">G</li>
+            	<li><a href="song-g-givemepowerlikegod.html" data-transition="slide">Give me power like God</a></li>
+				<li><a href="song-g-givemeaheartthatislikeyourslord.html" data-transition="slide">Give me a heart like Yours</a></li>
+            	<li><a href="song-g-godoftherighteous.html" data-transition="slide">God of the righteous</a></li>
+            	<li><a href="song-g-gogojesus.html" data-transition="slide">Go go Jesus</a></li>
+            	<li><a href="song-g-grandpanoah.html" data-transition="slide">Grandpa Noah</a></li>
+				
+            <li data-role="list-divider" role="heading">H</li>
+            	<li><a href="song-h-heiscoming.html" data-transition="slide">He is Coming</a></li>
+                <li><a href="song-h-higher.html" data-transition="slide">Higher</a></li>
+            	<!-- <li><a href="song.html" data-transition="slide">Name</a></li> -->
+			
+			<li data-role="list-divider" role="heading">I</li>
+            	<li><a href="song-i-iamhappy.html" data-transition="slide">I am happy</a></li>
+				<li><a href="song-i-ibelieve.html" data-transition="slide">I believe</a></li>
+				<li><a href="song-i-icannotlivewithoutthelord.html" data-transition="slide">I cannot live without the Lord</a></li>
+				<li><a href="song-i-idratherhavejesus.html" data-transition="slide">I'd rather have Jesus</a></li>
+				<li><a href="song-i-ifonaquietsea.html" data-transition="slide">If on a quiet sea</a></li>
+				<li><a href="song-i-ifthelordsaysso.html" data-transition="slide">If the Lord says so</a></li>
+				<li><a href="song-i-ifyourepent.html" data-transition="slide">If you repent</a></li>
+				<li><a href="song-i-illlaydownmyall.html" data-transition="slide">I'll lay down my all</a></li>
+				<li><a href="song-i-ilovethelord.html" data-transition="slide">I love the Lord</a></li>
+				<li><a href="song-i-iloveyou.html" data-transition="slide">I love you</a></li>
+				<li><a href="song-i-imyours.html" data-transition="slide">I'm yours</a></li>
+				<li><a href="song-i-intheholylandwolmyeongdong.html" data-transition="slide">In the holy land WMD</a></li>
+				<li><a href="song-i-ioffermylife.html" data-transition="slide">I offer up my life</a></li>
+				<li><a href="song-i-ithankyou.html" data-transition="slide">I thank you</a></li>
+				<li><a href="song-i-itothelord.html" data-transition="slide">I to the Lord</a></li>
+				<li><a href="song-i-iwillcomeagain.html" data-transition="slide">I will come again</a></li>
+				<li><a href="song-i-iwilllove.html" data-transition="slide">I will love</a></li>
+				<li><a href="song-i-iwillnotforsakeyou.html" data-transition="slide">I will not forsake you</a></li>
+			
+			<li data-role="list-divider" role="heading">J</li>
+				<li><a href="song-j-jesusiscoming.html" data-transition="slide">Jesus is coming</a></li>
+				<li><a href="song-j-joytotheworld.html" data-transition="slide">Joy to the world</a></li>
+				<li><a href="song-j-justlikethelordsheart.html" data-transition="slide">Just like the Lord's heart</a></li>
+			
+			<li data-role="list-divider" role="heading">L</li>
+				<li><a href="song-l-ladyofprovidence.html" data-transition="slide">Lady of Providence</a></li>
+				<li><a href="song-l-lampstandofprovidence.html" data-transition="slide">Lampstand of Providence</a></li>
+				<li><a href="song-l-life.html" data-transition="slide">Life</a></li>
+				<li><a href="song-l-lifeofprovidence.html" data-transition="slide">Life of Providence</a></li>
+				<li><a href="song-l-lifeoftherighteous.html" data-transition="slide">Life of the Righteous</a></li>
+				<li><a href="song-l-lightofhope.html" data-transition="slide">Light of Hope</a></li>
+				<li><a href="song-l-liketheprodigalson.html" data-transition="slide">Like the prodigal son</a></li>
+				<li><a href="song-l-looktothelordandonlyhim.html" data-transition="slide">Look to the Lord and only him</a></li>
+				<li><a href="song-l-lordbestrong.html" data-transition="slide">Lord be strong</a></li>
+				<li><a href="song-l-lordicalluponyourname.html" data-transition="slide">Lord I call upon your name</a></li>
+				<li><a href="song-l-lordraisemeup.html" data-transition="slide">Lord raise me up</a></li>
+				<li><a href="song-l-lordreceieveme.html" data-transition="slide">Lord receive me</a></li>
+				<li><a href="song-l-loveisalways.html" data-transition="slide">Love is always</a></li>
+				<li><a href="song-l-loveofprovidence.html" data-transition="slide">Love of Providence</a></li>
+				<li><a href="song-l-loveonceagain.html" data-transition="slide">Love once again</a></li>
+				<li><a href="song-l-lovesong.html" data-transition="slide">Love song</a></li>
+                
+			<li data-role="list-divider" role="heading">M</li>	
+            	<li><a href="song-m-memory.html" data-transition="slide">Memory</a></li>
+                <li><a href="song-m-mission.html" data-transition="slide">Mission</a></li>
+                <li><a href="song-m-myhomewolmyeongdong.html" data-transition="slide">My home Wolmyeongdeong</a></li>
+                <li><a href="song-m-myjoyandmyhope.html" data-transition="slide">My Joy and My Hope</a></li>
+                <li><a href="song-m-mylordwhoshinesintheword.html" data-transition="slide">My Lord Who Shines in the Word</a></li>
+                <li><a href="song-m-mylovewhohascomebysurprise.html" data-transition="slide">My Love who has come by surprise</a></li>
+                <li><a href="song-m-myprayer.html" data-transition="slide">My Prayer</a></li>
+				
+            <li data-role="list-divider" role="heading">N</li>	
+                <li><a href="song-n-nightballadofprovidence.html" data-transition="slide">A night ballad of Providence</a></li>
+                <li><a href="song-n-nothingcanstopme.html" data-transition="slide">Nothing can stop me</a></li>
+                <li><a href="song-n-noturningback.html" data-transition="slide">No turning back</a></li>
+                
+             <li data-role="list-divider" role="heading">O</li>	
+                <li><a href="song-o-ohmygod.html" data-transition="slide">Oh my God</a></li>
+                <li><a href="song-o-ohmylove.html" data-transition="slide">Oh my Love</a></li>
+                <li><a href="song-o-ohyoudear.html" data-transition="slide">Oh you dear</a></li>
+                <li><a href="song-o-oneway.html" data-transition="slide">One Way</a></li>
+                <li><a href="song-o-onthatlastday.html" data-transition="slide">On that last day</a></li>
+                <li><a href="song-o-onward.html" data-transition="slide">Onward</a></li>
+                <li><a href="song-o-ourlordgodalmighty.html" data-transition="slide">Our Lord God Almighty</a></li>
+    
+    		<li data-role="list-divider" role="heading">P</li>
+				<li><a href="song-p-pioneer.html" data-transition="slide">Pioneer</a></li>
+                <li><a href="song-p-portofsolitude.html" data-transition="slide">Port of solitude</a></li>
+                <li><a href="song-p-powerofyourlove.html" data-transition="slide">Power of your love</a></li>
+                <li><a href="song-p-pray.html" data-transition="slide">Pray</a></li>
+                <li><a href="song-p-promise.html" data-transition="slide">Promise</a></li>
+                <li><a href="song-p-providencedew.html" data-transition="slide">Providence Dew</a></li>
+                <li><a href="song-p-providencetrain.html" data-transition="slide">Providence Train</a></li>
+    
+    		<li data-role="list-divider" role="heading">R</li>
+                <li><a href="song-r-reflection.html" data-transition="slide">Reflection</a></li>
+                <li><a href="song-r-rendezvous.html" data-transition="slide">Rendezvous</a></li>
+                <li><a href="song-r-revival.html" data-transition="slide">Revival</a></li>
+                <li><a href="song-r-riverbankwherethewaterfowlsing.html" data-transition="slide">Riverbank Where the Waterfowl Sing</a></li>
+    
+    		<li data-role="list-divider" role="heading">S</li>
+                <li><a href="song-s-secretlythelordhascome.html" data-transition="slide">Secretly the Lord Has Come</a></li>
+                <li><a href="song-s-senddownyourfire.html" data-transition="slide">Send down your fire</a></li>
+                <li><a href="song-s-silentnight.html" data-transition="slide">Silent Night</a></li>
+                <li><a href="song-s-sittingorstanding.html" data-transition="slide">Sitting or Standing</a></li>
+                <li><a href="song-s-soldierssongofprovidence.html" data-transition="slide">Soldier song of Providence</a></li>
+                <li><a href="song-s-songofalongingheart.html" data-transition="slide">Song of a longing heart</a></li>
+                <li><a href="song-s-startingwithme.html" data-transition="slide">Starting with me</a></li>
+                <li><a href="song-s-still.html" data-transition="slide">Still</a></li>
+    
+    		<li data-role="list-divider" role="heading">T</li>
+                <li><a href="song-t-thecrimsonsunsentinthewest.html" data-transition="slide">The crimson sunset in the west</a></li>
+				<li><a href="song-t-thelord.html" data-transition="slide">The Lord</a></li>
+                <li><a href="song-t-thelordjesusspeaks.html" data-transition="slide">The Lord Jesus speaks</a></li>
+                <li><a href="song-t-thelordofglory.html" data-transition="slide">The Lord of glory</a></li>
+				<li><a href="song-t-thelordwhoshinesintheword.html" data-transition="slide">The Lord Who Shines in the Word</a></li>
+                <li><a href="song-t-theloveofjesus.html" data-transition="slide">The Love of Jesus</a></li>
+                <li><a href="song-t-theresnomeaningwithoutthelord.html" data-transition="slide">There's no meaning without the Lord</a></li>
+                <li><a href="song-t-theresnoproblematall.html" data-transition="slide">There's no problem at all</a></li>
+                <li><a href="song-t-theythatwaituponthelord.html" data-transition="slide">They that wait upon the Lord</a></li>
+                <li><a href="song-t-tofly.html" data-transition="slide">To fly</a></li>
+                <li><a href="song-t-toheaven.html" data-transition="slide">To Heaven</a></li>
+                <li><a href="song-t-tothelord.html" data-transition="slide">To the Lord</a></li>
+                <li><a href="song-t-towardshope.html" data-transition="slide">Towards Hope</a></li>
+    
+    		<li data-role="list-divider" role="heading">U</li>
+                <li><a href="song-u-unconditional.html" data-transition="slide">Unconditional</a></li>
+                <li><a href="song-u-untilthelordcomesbackagain.html" data-transition="slide">Until the Lord comes back again</a></li>
+    
+    		<li data-role="list-divider" role="heading">W</li>
+                <li><a href="song-w-waitingheart.html" data-transition="slide">Waiting heart</a></li>
+                <li><a href="song-w-wehavechanged.html" data-transition="slide">We Have Changed</a></li>
+                <li><a href="song-w-wearethereason.html" data-transition="slide">We are the reason</a></li>
+                <li><a href="song-w-whatabeautifulheaven.html" data-transition="slide">What a beautiful heaven</a></li>
+                <li><a href="song-w-whateverlovemaybe.html" data-transition="slide">Whatever love may be</a></li>
+                <li><a href="song-w-whatifeelislove.html" data-transition="slide">What I feel is love</a></li>
+                <li><a href="song-w-whiteflower.html" data-transition="slide">White Flower</a></li>
+				<li><a href="song-w-whitelilyoftheholyland.html" data-transition="slide">White Lily of the Holy Land</a></li>
+                <li><a href="song-w-wish.html" data-transition="slide">Wish</a></li>
+                <li><a href="song-w-withlove.html" data-transition="slide">With Love</a></li>
+                <li><a href="song-w-withoutthelord.html" data-transition="slide">Without the Lord</a></li>
+                <li><a href="song-w-withthelordforever.html" data-transition="slide">With the Lord Forever</a></li>
+			
+			<li name="y" id="y" data-role="list-divider" role="heading">Y</li>
+                <li><a href="song-y-yesterdayortoday.html" data-transition="slide">Yesterday or today</a></li>
+                <li><a href="song-y-youyouthfulone.html" data-transition="slide">You youthful one</a></li>
+		</ul>
+	</div>
+	<!-- list ends -->
+
+     
+  </div><!-- /content -->
+	
+</div><!-- /page -->
+
+<div data-role="page" id="about">
+    
+    <!-- header -->
+	<div data-role="header" class="page-header" >
+    	<a   data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" href="#index">Back</a>
+    		<div class="logo"></div>
+    	<a href="#index" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+	</div>
+    <!--/header -->
+    
+	<!-- banner & title -->
+	<div class="bannerContainer">
+		<img src="assets/images/headers/wmd.jpg" class="banner">	
+    </div>
+  	<h2 class="pageTitle"><span>About</span></h2>
+        <div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
+	<!-- /banner & title -->
+    
+    <!-- main content -->
+    <div data-role="content">
+    
+	<h4>Providence Church</h4>
+	<p>Our teacher began Providence Church 30 years ago to spread the gospel throughout the world. Providence has now spread to over 50 different nations. Our mission is to resurrect the arts, education based on the Word of God, and understanding of this world by encouraging a lifestyle of giving glory to God. </p>
+	
+	<p>In this version of the app we have included
+		<ul>
+        	<li><strong>Gallery</strong> These are the symbols of Providence Church. We've included some original art, photography, and landscapes.</li>
+			<li><strong>Featured Messages</strong> These sermons have been selected because they especially feature the key themes and doctrines unique to Providence church. </li>
+            <li><strong>A Praisebook</strong> containing the songs inspired by and originally written within Providence church.</li>
+		</ul>
+	</p>
+    <h3>Contact</h3>
+    <p>You can email us at <a href="mailto:Admin@GospelofProvidence.com">Admin@GospelofProvidence.com</a> if you have any questions, suggestions, or comments!</p>
+    
+    <h3>Make a Contribution!</h3>
+    <p>Requires internet connection</p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHPwYJKoZIhvcNAQcEoIIHMDCCBywCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAozCmNl/gRVo5DrA/Vyvr0OHFWUceI4Wyo9kANPR5zDE2oaBN7gWQ1nVALmPFo9N19M2kTwJhmsLKeV5WBY+oSFShfWcD718DZpnWWmjpOE+W90f0684YdjF6wrTIVblad2Z8sf9kkJ3ufTYiMlchtOr4VYCZZD/oW4lJtBV05GzELMAkGBSsOAwIaBQAwgbwGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIXBJVblbrjPSAgZjQwp8RiOl27eYnWL5uHSPDqKy8QK20QD5PO9pvzmVv5kY7UnyNd5VFLFCZS8BMVp7SoCKK/saeGTufA1vAPYNhuHgXaLQI4Y4uFn6cEyPa8lHEX+b7YvAQx4WbYYRYBhl9cNeAhdpOBni1sAsYjz3fzr285a649Th5p7p9yEYGucmN/dDsf2E6Hpz477pdwJAAIgQTQK/33KCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTEyMDUyMzAwMDcxMFowIwYJKoZIhvcNAQkEMRYEFPr/Qac6N/W4R0qsIQ4uutUx9SZrMA0GCSqGSIb3DQEBAQUABIGAmbiwSuRDsPW26Fv6VBjwmcrMWc658oKLeZzlgyv5mfrF0DUCeMs63WO2ABb0AT6ZMZRxIwKjCXo/Sk0ggtF9RU5twmVE0V5BGMANRoNRF1pkkJySednZ/+XEjizFyCwGkbmw4whxtzeqvr7Fm5oKOOLRBz+uzlnbRIB6J6PO6yk=-----END PKCS7-----
+">
+<input type="submit" value="Donate" name="submit" alt="PayPal - The safer, easier way to pay online!">
+</form>
+</div><!-- /content -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="proverbs">
+ <!-- header -->
+	<div data-role="header" class="page-header" data-add-back-btn="true">
+    	<a href="index.html" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" data-rel="back" rel="external">Back</a>
+    		<div class="logo"></div>
+    	<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
+	</div>
+    <!--/header -->
+    
+	<!-- banner & title -->
+	<div class="bannerContainer">
+		<img src="assets/images/headers/header-praise.jpg" class="banner">	
+    </div>
+  	<h2 class="pageTitle"><span>Proverbs</span></h2>
+	<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
+	<!-- /banner & title -->
+    
+    <!-- main content -->
+    <div data-role="content">
+	<div data-role="collapsible">
+	<h2>Proverbs about Heaven</h2>
+		<blockquote>"Heaven is made according to the desires of the Trinity. They want those who love them the most to come and live there.</blockquote>
+
+		<blockquote>Even you want to give the best things to those who live devote their body and love you the most among those who love you. You give to them and let them use it.</blockquote>
+
+		<blockquote>Things of the world are things given on a miniature scale as preparation to give eternal things in Heaven."</blockquote>
+
+		<blockquote>"Your location in Heaven is determined by your thoughts, actions, and accomplishments. Even in the same location, 
+		your position is determined by how much merit you accumulated. However, even there, if you like water, he will let you live 
+		with background of water, and if you like mountains, he will let you live with background of mountains. You definitely live
+		 in a world that is a manifestation of your thoughts, actions, ways, and accomplishments."</blockquote>
+
+		<p>- JMS, May 22nd 2012</p>
+
+	</div>
+	<div data-role="collapsible">
+	<h2> Proverbs about "flying"</h2>
+		<blockquote>It's not that a big thing cannot fly because it's heavy or a small thing can fly because it's light. Regardless of size, it flies because it was created to fly.</blockquote>
+
+		<blockquote>Though big and heavy, earth flies in the Universe, but a stone, though small, cannot fly even on earth. Stars too fly in the Universe.</blockquote>
+
+		<blockquote>The heart should fly in the midst of life.</blockquote>
+
+		<blockquote>'To fly' means 'to free from restriction.'</blockquote>
+
+		<blockquote>Just as creatures with wings live flying, human beings also should live flying in their respective field.</blockquote>
+
+		<blockquote>There are people who fly by studying and making efforts on their own and there 
+		are people who fly by living with the Almighty who created them and with the savior who saves them.</blockquote>
+
+		<blockquote>Human beings should fly in the body, fly with the mind, fly in the spirit, and 
+		fly leading a life that enables their spirit to live forever. Only they will reach the greatest heights.</blockquote>
+
+		<blockquote>If you live without being in love with the Lord who came to save the world, you cannot live your life flying.</blockquote>
+
+		<blockquote>Even within the same region, some live flying, some live walking, and some live crawling. It is not known until that life is lived.</blockquote>
+
+		<blockquote>According to the deeds of your body, the life of your body on earth, as well the life of your spirit in the spiritual world, is formed.</blockquote>
+		<p>- JMS, April 2012</p>
+	</div>
+
+	<div data-role="collapsible">
+		<h2> God's Will and the time period</h2>
+		<blockquote> Those who do things out of their own volition are people who do things with a sincere heart. They know the highest Will. </blockquote>
+
+		<p>- Friday, May 18, 2012</p>
+
+		<blockquote> To those who have thorns lodged in their hands and heart, show them a person who
+		 is nailed in his heart and head because of their sins and the sins of the time period. Teach 
+		 them about the time period by teaching them what time this time period is and teaching them history. </blockquote>
+		 
+		<p>- JMS, May 15, 2012</p>
+	</div>
+
+	<div data-role="collapsible">
+		<h2>Proverbs about healing</h2>
+
+		<blockquote>One person thought that a ghost was making him sick. All he did was pray for the ghosts
+		 to be gone. When he was examined medically, [it turned out that] he was hurting because germs had 
+		 invaded a wound. He was immediately healed when the wound was disinfected and medication was applied.</blockquote>
+
+		<blockquote>There was a person who thought that they were in that much pain because one side of 
+		his body was rotting. He went to the hospital and got x-rayed only to find that there was nothing
+		 wrong. Demons and ghosts do not show up on x-rays. Ultimately they came out through prayer. </blockquote>   
+		 
+		<p>- JMS, Thursday May 17, 2012</p>
+	</div>
+
+	<div data-role="collapsible">
+	<h2> Proverbs about mind and body</h2>
+		<blockquote>A person's mind is "life" for the body. If you're going to communicate with the Lord, 
+		your mentality must be connected to Him. To be "connected" means you must hook your heart to the 
+		Lord's heart. Once you're linked, you will get through to Him through conversation.</blockquote>
+
+		<blockquote>A person's body cannot take anything with them when they die. Likewise, you can't take
+		 anything with you when you go to Heaven. Your spirits can take to Heaven only the righteous 
+		 deeds and accomplishments you've done in the world. Such things are love, truth, and goodness. 
+		 Once your spirit is transformed into a person of Heaven through love, truth, and goodness, 
+		 you take your changed spirit with you to Heaven along with knowledge and wisdom about Heaven 
+		 you've gained while the body was in the world.</blockquote>
+
+		<blockquote>When constructing a large building the tools used by the workers are different, 
+		the types of workers are different, and the work each worker does is different. All of them 
+		must work together as one. Then the building will become complete. In the same way, those 
+		who are working for the Lord must work together as one and be understanding of each other 
+		even though their characters, personalities, and work are different. If they do, goals are 
+		achieved and work gets done. If everyone does the exact same work, the building will not be 
+		completed even in an entire lifetime. Everyone must help, care for, and love as they build 
+		the building while thinking, "This is a house I will live in."</blockquote>
+
+		<blockquote>Your mind and actions have to be totally consumed with love for the Lord. Then you will not love anything in the world and you will not fall for those things.</blockquote>
+
+		<p>- JMS, Monday March 14th</p>
+	</div>
+
+	<div data-role="collapsible">
+		<h2> Proverbs about perception</h2>
+
+		<blockquote>People who think that women are weaker than men will live their entire lifetime thinking women are weak and treating them as if they are weak.</blockquote>
+
+		<blockquote>Between men and women, which can be so cold to you that you feel frost fall in summer?</blockquote>
+
+		<blockquote>Men and women are strong in their own ways but since women are naturally strong at love, their mentality of loving the Lord is strong too.</blockquote>
+
+		<blockquote>If you perceive righteous people as sinners, they will seem like sinners to you.</blockquote>
+
+		<blockquote>Misunderstandings come from incorrect perceptions.</blockquote>
+
+		<blockquote>Even the Almighty can only work according to people's perceptions.</blockquote>
+
+		<blockquote>People will never do something they perceive to be impossible, even if they are fully capable.</blockquote>
+
+		<blockquote>In life there are many times people say things that upset you and create 
+		conflicts with you. Don't store memories of such things in your brain, don't be aware
+		 of them, only plug your ears, ignore them, and move on!</blockquote>
+
+		<p>- JMS, May 16th 2012</p>
+	</div>
+
+	<div data-role="collapsible">
+		<p> Proverbs about the body, soul, and spirit</p>
+
+		<blockquote>When you are calling out to, praying, and petitioning to the Almighty 
+		Holy Son of the Trinity, and focus on the Holy Son the Lord, you will gain realizations about His heart.</blockquote>
+
+		<blockquote>The body cannot connect with the spirit by itself. Even your own body has
+		 to go through the heart, mind, thoughts and soul in order to connect to the spirit. 
+		 And even if it is your own spirit, it must do the physical work through the body.</blockquote>
+
+		<blockquote>When you see your spirit in a dream, what you're seeing is a supernatural 
+		effect in which your heart, mind, and soul appear and take action with the body's image
+		 as the basis. That is not your spirit's actual image. That's an image of the spirit you
+		 see through the heart, mind, and soul of your body.</blockquote>
+
+		<p>- JMS, Thursday May 10th 2012</p>
+	</div>
+
+	<div data-role="collapsible">
+		<h2>Proverbs about 'running until the end'</h2>
+
+		<blockquote>A successful person keep running only on the path of success without giving 
+		up on it, even if they have to give up on all other things so that they can continue to run on this path.</blockquote>
+
+		<blockquote>Whatever area it may be, when a person becomes an expert, they try it scores
+		 of times (the first stage), they try it hundreds of times next (the second stage), they
+		 try it thousands of times (the third stage), and then they try tens of thousands 
+		 of times (the fourth stage). After these many attempts, when they are able 
+		 to do it without a mistake, they become an expert.</blockquote>
+
+		<blockquote>Until 6, you have to wrestle with Satan. The side of Heaven is number 7. 
+		Therefore, as long as they go to the end, they will win. The level which is one step 
+		higher than number 6 is the number of love. If you love the Holy Son Lord 100%, you reach 
+		number 7. The number of the one thousand year Complete Testament history, 7, which is the 
+		last number, is the number of a thousand year wedding banquet of love. It is the number 
+		of love. Therefore, whoever hopes to defeat Satan must raise themselves one level higher 
+		than Satan's number and love only the Lord with number 7, that is the number of love.</blockquote>
+
+		<blockquote>Up to number 6, it is about faith, Word, praise, thanksgiving, prayer, 
+		endurance, and obedience. Despite all that, Satan wrestles with us. If you add the last 1 
+		to number 6, then it becomes number 7. And that [one number] is 'love.' Satan cannot love, 
+		so he ends at number 6. When you just love the Holy Son Lord, the things of Satan end there. 
+		Satan is opposite to love, so if we just love the Lord, it means the end for Satan.</blockquote>
+
+		<blockquote>It is about earnest prayer and love.</blockquote>
+
+		<blockquote>Do not just have an earnest heart but take action with an earnest heart. Things work as you make up your mind and take action.</blockquote>
+
+		<blockquote>The sound of truthfulness and sincerity sets one's heart on fire. Therefore, it does not stop there but actualizes what is in the heart in reality.</blockquote>
+
+		<blockquote>Having an earnest heart is like making something with complete devotion.</blockquote>
+
+		<blockquote>The Holy Son Lord is sincere and truthful. Therefore, when human beings are sincere and truthful, they connect with the Lord.</blockquote>
+
+		<blockquote>There is the ultimate difference between Satan and us--that is, Satan does not 
+		love the Holy Son Lord. Therefore, it is easy for Satan to tempt us if we only try to be 
+		saved by the Lord while not truly loving the Lord.</blockquote>
+
+		<p>- JMS, Saturday, May 5, 2012</p>
+	</div>
+
+	<div data-role="collapsible">
+		<p>Proverbs about fulfilling hope</p>
+
+		<blockquote>Whether you live in a palace, a grass-thatched house, confined in a prison, or 
+		are going through any suffering or tribulation; you should not lose hope in the present and 
+		live, doing every day what you must do and fulfilling the Lord's will in your current environment 
+		and position. If you fail to receive what you should receive just because you are going through 
+		sufferings in the present, you will not be able to receive it even if a peaceful time comes in the future.</blockquote>
+
+		<blockquote>The hope of the future is fulfilled in the present.</blockquote>
+
+		<blockquote>What was hoped for in the past is also fulfilled in the present.</blockquote>
+
+		<p>- JMS, Tuesday March 22, 2011</p>
+	</div>
+	
+	<div data-role="collapsible">
+	<h2>Past, Present, Future </h2>
+		<blockquote>A life of hope that everyone dreamed would take place in the future is being lived everyday in the reality now.</blockquote>
+
+		<blockquote>Unless we fulfill the hope, dreams, and actions of the future in the reality now, they will not be fulfilled even in the future.</blockquote>
+
+		<blockquote>If you cannot understand, view yesterday as the past, view today as the present, 
+		and view tomorrow as the future. Unless you fulfill your hope for today, you will not be able 
+		to fulfill the hope of tomorrow. In a human being's life, the past, the present, and the future 
+		are all connected.</blockquote>
+
+		<p>- JMS, Monday, March 21, 2011</p>
+	</div>
+	
+	<div data-role="collapsible">
+		<h2> Responsibility, Love </h2>
+		<blockquote>People only pray for what they want but they are unaware that, in order to receive 
+		what they want from prayer, they must set conditions and also equip themselves with action within 
+		the Lord's Will. Hence, even though they petition, they fail to acquire it. Even if a person 
+		prays earnestly and receives a positive answer from God, they must first do their human responsibilities
+		in order to obtain. </blockquote>
+		
+		<p> - Saturday, March 12, 2011 </p>
+
+		<blockquote> Even if a person loves the Lord, they must repent of their sins before the Lord can take them and make them his own.</blockquote>
+
+		<p>- Saturday, March 12, 2011</p>
+
+		<blockquote> A person whose purpose is love will think of that love in all situations and live for the sake of love.</blockquote>
+
+		<blockquote>Jesus' purpose is 'love.' He sets 'love' as his first hope, values 'love' as the 
+		most precious life, and only talks about love whether in the beginning or in the end. The Lord 
+		does all things for us with the purpose of 'love.' So if we love truly love him, when he sees us, 
+		there is nothing that pleases him more than our love.</blockquote>
+
+		<blockquote>The Lord judges, blesses, saves, works upon us, and comes to us because of love.</blockquote>
+
+		<p>- JMS, Thursday, March 10, 2011</p>
+
+		<blockquote>Jesus' love is the only key to salvation. So embrace that love.</blockquote>
+
+		<blockquote>You must be united with the Lord in love and shine your light taking action according 
+		to the Lord's Will. You must not go faster than the Lord and you must not go slower than the Lord.</blockquote>
+
+		<blockquote>If you don't know the value of something or someone, you will lose even a treasure you're holding in your hand.</blockquote>
+
+		<p>- JMS, Monday February 28th 2011</p>
+	</div>
+
+	<div data-role="collapsible">
+		<h2>Proverbs about the spirit</h2>
+		<blockquote> The fate of one's spirit is determined according to the person's heart, thoughts, 
+		and the action of their body. Only by listening to Jesus' perfect Word, deliberately making a 
+		determination, and taking action, will the body transform into a person of a heavenly level while 
+		the spirit, too, changes to the same level of heaven.</blockquote>
+		<p>- Saturday, February 26, 2011</p>
+
+		<blockquote>The spirit is made and perfected according to the body's deeds, thus it comes to 
+		receive love from the Lord. Therefore, if the body listens to the Lord's words and does righteous
+		 deeds, both the body and the spirit will change, shine brightly, and carry out a mission at a 
+		 higher level.</blockquote>
+		 
+		 <p>- Friday, February 25, 2011</p>
+
+		<blockquote> You don't gain things just because you try to gain more. You will make gains 
+		as much as your heart, thoughts, and actions change for the better according to the Lord's will.</blockquote>
+
+		<blockquote>When you have the same actions, same heart, and same things repeating over 
+		and over again, you will only receive things of that level and stage. You must change 
+		in better ways. Then you will receive better and different things.</blockquote>
+
+		<blockquote>How long will you not change and continue to live in the mud brick home? 
+		Do you intend to live only in your spiritual domain, according to your own thoughts 
+		and not the Lord's thoughts?</blockquote>
+
+		<blockquote>Some people are living in mansions of faith by hearing the Lord's words 
+		and taking action with all their might. Yet they are not satisfied and are struggling 
+		even more so they will change more. You follow the Lord with as much conviction as they 
+		do, but how long do you intend to live satisfied with the mud brick home?</blockquote>
+
+		<p>- JMS, February 23, 2011</p>
+
+	</div>
+	<div data-role="collapsible">
+		<h2>Proverbs about God's history</h2>
+		<blockquote> Understand that the 30 principles were words I received after virtually 
+		trading my own life as I struggled mightily for those arduous 30 years. Correctly 
+		knowing and understanding the words of God is not easy. I realized the words only 
+		after laying such foundations and conditions. I ran for the Lord, reading the bible 
+		2000 times, evangelizing 10,000 people per year, defeating all the satans and demons, 
+		and overcoming all matters of physical adversities. So treacherous and wretched 
+		was my physical life that I cringe even at the thought of it.</blockquote>
+
+		<blockquote>Now that the word of this time period has been proclaimed, it is spreading. 
+		"Listen to the words of the Thirty Principles. The words of this time period have begun. 
+		God's history has begun."</blockquote>
+
+		<blockquote>Whether the person is suffering as a result of sins, laziness, or not receiving 
+		blessings from God, we must help and have mercy on them regardless of the reason. When Jesus 
+		came to this world with the mission from God to make salvation happen, he helped and comforted 
+		the poor, the destitute, the prostitutes, sinners, and everyone else in need. We must do the 
+		same in our lives so that we can enter the kingdom that God prepared and not be judged. Only 
+		by living that way can we shine brightly. If you love me and obey my words, then you will help 
+		those who love and follow me whenever they are in need, without pointing fingers and accusing 
+		them of failing to fulfill personal responsibilities, of being ignorant, lazy, or having weak 
+		faith. You must help them and watch over them as you would watch over your own bodies, and you 
+		must eat and rejoice with them.</blockquote>
+
+		<blockquote>Then you will know the truth and the truth will set you free. Jesus proclaimed 
+		the words of salvation from God for that new time period, and when anyone who was a prisoner 
+		of the former time period followed those words, then they became free. When the people came 
+		to know the truth, then they were freed from the bondage of the OT [Old Testament]. And, in 
+		the same way, those who were imprisoned by the spiritual domain of the NT [New Testament], by 
+		hearing the words of this time period and the 30 principles, are now free. They now have 
+		religious freedom, spiritual freedom, and physical freedom.</blockquote>
+
+		<blockquote>Make peace and resolve among you. Talk and maintain good relationships. If you 
+		cannot resolve conflicts with visible men, how could you resolve conflicts with invisible God? 
+		If you don't reconcile with one another, I myself do not resolve with you. In deep prayer, you 
+		realize all your problems can be attributed to your shortcomings. You have learned the 30 
+		Lessons and the tremendous Word of Heaven, so you have become quite polished in terms of 
+		speaking. You have received all the necessary resources you need to be a man or woman of 
+		Heaven. As a mouth to preach the Gospel of the time, your mouth should not be tough. 'Tough' 
+		here means 'dirty,' or 'rotten'. </blockquote>
+	</div>
+
+  </div><!-- /content -->
+</div><!-- /page -->
 
 </body>
 </html>
