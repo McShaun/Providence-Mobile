@@ -10,13 +10,13 @@
     <!-- scripts -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+	<script src="assets/js/cordova-2.0.0.js" type="text/javascript" charset="utf-8" ></script>
 	<script src="assets/js/back.js"></script>
     <script src="assets/portfolio/lib/klass.min.js"></script>
 	<script src="assets/portfolio/code.photoswipe.jquery-3.0.4.min.js"></script>
 	<script src="assets/slider/jquery.flexslider-min.js"></script>
 	<script src="assets/js/jquery.tweet.js"></script>
-	<script src="assets/js/init.js" type="text/javascript" />
+	<script src="assets/js/init.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
 			document.write('<link rel="stylesheet" href="assets\/add-bubble\/style\/add2home.css">');
@@ -78,8 +78,8 @@
 		<ul data-role="listview" data-inset="true" id="listview" style="margin-bottom:0px">
 			<li><a href="#portfolio" data-prefetch data-transition="none">Photo Gallery</a></li>
     		<li><a href="#songs" data-prefetch data-transition="none">Praise</a></li>
-            <li><a href="#messages" data-prefetch data-transition="none" >Featured Messages</a></li>
-            <li><a href="#about" data-prefetch data-transition="none">About</a></li>
+            <li><a href="#messages" data-transition="none" >Featured Messages</a></li>
+            <li><a href="#about" data-transition="none">About</a></li>
             <li><a href="contact.php" data-prefetch data-transition="none">Contact Us</a></li>
         </ul>
         <div class="shadow2box"><img src="assets/images/shadow2.png" class="shadow2" alt="shadow"></div>
@@ -89,8 +89,8 @@
 
 <div data-role="page" id="portfolio">
     <!-- header -->
-	<div data-role="header" class="page-header">
-    	<a href="#index" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse">Back</a>
+	<div data-role="header" class="page-header" data-add-back-btn="true">
+    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse"  class="ui-btn-right">Home</a>
 	</div>
@@ -117,7 +117,7 @@
 <div data-role="page" id="gallery" class="gallery-page">
 
 <div data-role="header"  class="page-header">
-    <a href="#portfolio" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse">Back</a>
+    <a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
 		<h1>Photo Gallery</h1>
 	</div>
 
@@ -196,7 +196,7 @@
 
     <!-- header -->
 	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a href="#index" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse">Back</a>
+    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right">Home</a>
 	</div>
@@ -266,7 +266,7 @@
 <div data-role="page" id="songs">
     <!-- header -->
 	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a href="#index" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse">Back</a>
+    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right">Home</a>
 	</div>
@@ -292,7 +292,7 @@
 
 		<ul class="ui-listview" data-filter-theme="b" data-filter-placeholder="Search..." data-filter="true" data-role="listview" data-inset="true">
             <li data-role="list-divider" role="heading">A</li>
-				<li><a id="a" href="song-a-grain.html" data-transition="slide">A Grain of Wheat</a></li>
+				<li><a href="song-a-grain.html" data-transition="slide">A Grain of Wheat</a></li>
                 <li><a href="song-a-h.html" data-transition="slide">A heart like thine</a></li>
                 <li><a href="song-a-adoration.html" data-transition="slide">Adoration</a></li>
                 <li><a href="song-a-ahhistoryofprovidence.html" data-transition="slide">Ah History of Providence</a></li>
@@ -309,6 +309,7 @@
             <li data-role="list-divider" role="heading">B</li>
 				<li><a href="song-b-blessing.html" data-transition="slide">Blessing</a></li>
                 <li><a href="song-b-blind.html" data-transition="slide">Blind Love *</a></li>
+				
             <li data-role="list-divider" role="heading">C</li>
                 <li><a href="song-c-cheer.html" data-transition="slide">Cheer song</a></li>
                 <li><a href="song-c-xmas2.html" data-transition="slide">Christmas Bells (Christmas II)</a></li>
@@ -478,7 +479,7 @@
     
     <!-- header -->
 	<div data-role="header" class="page-header" >
-    	<a   data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" href="#index">Back</a>
+    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
 	</div>
@@ -523,9 +524,9 @@
 <div data-role="page" id="proverbs">
  <!-- header -->
 	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a href="index.html" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" data-rel="back" rel="external">Back</a>
+    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
     		<div class="logo"></div>
-    	<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
+    	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
 	</div>
     <!--/header -->
     

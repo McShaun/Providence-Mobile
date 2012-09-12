@@ -19,12 +19,6 @@
 					loading_text: "Loading Title...",
 					template: "{tweet_text}"
 				});
-				//Test...
-				var stringData = $.ajax({
-					url: "http://127.0.0.1/Providence-Mobile/sample.txt",
-					async: false,
-				 }).responseText;
-				$('div.demo-container').html(stringData);
 				//Loading Gallery Page
 				$('div.gallery-page')
 					.live('pageshow', function(e){
