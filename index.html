@@ -87,10 +87,9 @@
   </div>
 </div><!-- /page -->
 
-<div data-role="page" id="portfolio">
+<div data-role="page" id="portfolio" data-add-back-btn="true" >
     <!-- header -->
-	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
+	<div data-role="header" class="page-header" >
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse"  class="ui-btn-right">Home</a>
 	</div>
@@ -114,10 +113,9 @@
 		</div>	
 </div>
 
-<div data-role="page" id="gallery" class="gallery-page">
+<div data-role="page" id="gallery" class="gallery-page" data-add-back-btn="true" >
 
 <div data-role="header"  class="page-header">
-    <a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
 		<h1>Photo Gallery</h1>
 	</div>
 
@@ -192,11 +190,10 @@
 	</div>
 </div>
 
-<div data-role="page" id="messages">
+<div data-role="page" id="messages" data-add-back-btn="true"  >
 
     <!-- header -->
 	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right">Home</a>
 	</div>
@@ -263,10 +260,9 @@
   </div><!-- /content -->	
 </div><!-- /page -->
 
-<div data-role="page" id="songs">
+<div data-role="page" id="songs" data-add-back-btn="true" >
     <!-- header -->
-	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
+	<div data-role="header" class="page-header">
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right">Home</a>
 	</div>
@@ -292,7 +288,7 @@
 
 		<ul class="ui-listview" data-filter-theme="b" data-filter-placeholder="Search..." data-filter="true" data-role="listview" data-inset="true">
             <li data-role="list-divider" role="heading">A</li>
-				<li><a href="song-a-grain.html" data-transition="slide">A Grain of Wheat</a></li>
+				<li><a class="song" id="song-a-grain.txt" href="#song" data-transition="slide">A Grain of Wheat</a></li>
                 <li><a href="song-a-h.html" data-transition="slide">A heart like thine</a></li>
                 <li><a href="song-a-adoration.html" data-transition="slide">Adoration</a></li>
                 <li><a href="song-a-ahhistoryofprovidence.html" data-transition="slide">Ah History of Providence</a></li>
@@ -475,11 +471,10 @@
 	
 </div><!-- /page -->
 
-<div data-role="page" id="about">
+<div data-role="page" id="about" data-add-back-btn="true" >
     
     <!-- header -->
 	<div data-role="header" class="page-header" >
-    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
 	</div>
@@ -521,10 +516,9 @@
 
 </div><!-- /page -->
 
-<div data-role="page" id="proverbs">
+<div data-role="page" id="proverbs" data-add-back-btn="true" >
  <!-- header -->
-	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a data-icon="arrow-l" data-iconpos="notext" data-rel="back" >Back</a>
+	<div data-role="header" class="page-header">
     		<div class="logo"></div>
     	<a href="#index" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
 	</div>
@@ -864,6 +858,33 @@
 	</div>
 
   </div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="song" data-add-back-btn="true">
+    <!-- header -->
+	<div data-role="header" class="page-header" data-add-back-btn="true">
+    		<div class="logo"></div>
+    	<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
+	</div>
+    <!--/header -->
+    
+	<!-- banner & title -->
+	<div class="bannerContainer">
+		<img src="assets/images/headers/header-praise.jpg" class="banner">	
+    </div>
+  	<h2 class="pageTitle"><span id="songTitle"></span></h2>
+	<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
+	<!-- /banner & title -->
+    
+    <!-- main content -->
+    <div data-role="content">
+	<div class="song" style="text-align:center">
+	
+	</div>
+	<fieldset >
+		<div ><a data-icon="arrow-l" href="page-styles.html" data-role="button" data-direction="reverse"  rel="external" data-rel="back">Back</a></div>  
+	</fieldset>
+        </div><!-- /content -->
 </div><!-- /page -->
 
 </body>
