@@ -19,13 +19,6 @@
 </head> 
 <body>
 <div data-role="page">
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$.get("http://www.biblestudyinteractive.com/praise/assets/songs/song-a-grain.txt", function(data){
-				$('div.song').html(data.slice(data.indexOf("\n")));
-			});
-	   });
-    </script>
     <!-- header -->
 	<div data-role="header" class="page-header" data-add-back-btn="true">
     	<a href="index.html" data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" data-rel="back" rel="external">Back</a>
