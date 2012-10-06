@@ -816,7 +816,18 @@ Built by David Kaneda and maintained by Jonathan Stark.
 .ui-navbar-expanded .ui-btn-icon-bottom .ui-icon { bottom: 15px; }
 .ui-navbar-expanded li .ui-btn .ui-btn-inner { min-height: 2.5em; }
 .ui-navbar-expanded .ui-navbar-noicons .ui-btn .ui-btn-inner { padding-top: 1.8em; padding-bottom: 1.9em; }
-.ui-btn { display: block; text-align: center; cursor:pointer;  position: relative; margin: .5em 5px; padding: 0; }
+.ui-btn { display: block; text-align: center; cursor:pointer;  position: relative; margin: .5em 5px; padding: 0; background: #69898F; /* SM these are all changes to help the top left button*/ /* background:url(../images/arrow-dark.png) right no-repeat; */
+	background-size: 25px 30px;
+	
+	font-family: 'Kaushan Script', cursive; font-size:18px;
+	/* font-family: 'Lobster', cursive; font-size:17px; */
+ 	/* font-family: 'Cardo', serif; font-size:16px; */
+ 	/*  font-family: 'Droid Sans', sans-serif; font-size:16px;  */
+	/* font-family: 'Droid Serif', serif; font-weight:400; font-size:16px; */
+	
+	color:#eee !important;
+	text-shadow: 0 -1px 1px #333;
+	text-decoration:none }
 .ui-header .ui-btn, .ui-footer .ui-btn, .ui-bar .ui-btn { display: inline-block; font-size: 13px; margin: 0; }
 .ui-btn-inline { display: inline-block; }
 .ui-btn-inner { padding: .6em 25px; display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; position: relative; zoom: 1; }
@@ -1221,7 +1232,7 @@ span.ui-slider-label-b { right: -100%;  margin-left: -1px }
 	/* border: 1px solid #111; */
 	border: 1px solid #616768; /* SM */
 	/* background: #342F2A; */
-	background: #69898f; /* sm */
+	background: #69898f;  sm */
 	font-weight: bold;
 	color: #fff;
 	text-shadow:  0 1px 1px #111;
@@ -1382,7 +1393,8 @@ a.ui-link-inherit:hover {
 	color:#393a42 !important; 
 }
 
-.events-list span.ui-icon, .thumbnail-list span.ui-icon {display:none}
+.events-list span.ui-icon, .thumbnail-list span.ui-icon {display:none
+}
 
 
 
