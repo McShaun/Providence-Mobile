@@ -10,21 +10,20 @@
     <!-- scripts -->
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<script src="assets/js/cordova-2.0.0.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="assets/js/cordova-2.1.0.js" type="text/javascript" charset="utf-8" ></script>
 	<script src="assets/js/back.js"></script>
     <script src="assets/portfolio/lib/klass.min.js"></script>
 	<script src="assets/portfolio/code.photoswipe.jquery-3.0.5.min.js"></script>
 	<script src="assets/slider/jquery.flexslider-min.js"></script>
 	<script src="assets/js/jquery.tweet.js"></script>
+	<script src="assets/js/contact.js" type="text/javascript"></script>
 	<script src="assets/js/init.js" type="text/javascript"></script>
-	<script src="assets/js/submit.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
 			document.write('<link rel="stylesheet" href="assets\/add-bubble\/style\/add2home.css">');
 			document.write('<script type="application\/javascript" src="assets\/add-bubble\/src\/add2home.js" charset="utf-8"><\/s' + 'cript>');
 		}
 	</script>
-	
     <!-- css -->
    	<link rel="stylesheet" href="assets/css/style-shaun.css"> 
 	<link href="assets/images/ssn.ico" rel="shortcut icon" type="image/x-icon" />
@@ -76,7 +75,6 @@
     <hr class="ornamental"/>
 	<div class="tweet" style="color:#300"></div>
 	<hr class="ornamental"/>
-
 		<!-- navigation -->
 		<ul data-role="listview" data-inset="true" id="listview" style="margin-bottom:0px">
 			<li><a href="#portfolio" data-prefetch data-transition="none">Photo Gallery</a></li>
@@ -862,7 +860,7 @@
     <!-- header -->
 	<div data-role="header" class="page-header" >
     		<div class="logo"></div>
-		<a href="index.html" data-transition="none" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+		<a href="index.html" data-transition="none" data-icon="home" data-iconpos="notext" data-direction="reverse"  class="ui-btn-right">Home</a>
 	</div>
     <!--/header -->
     
@@ -881,7 +879,7 @@
     
 		<div id="errors" class="hide ui-corner-all"></div>
 		<p align="right">*</p>
-		<form name="form1" id="callAjaxForm">
+		<form name="form1" id="form1">
 			<div data-role="fieldcontain">
 				<label for="name">First Name: *</label>
 				<input type="text" name="name" id="name" autofocus />
@@ -918,11 +916,18 @@
 			<div data-role="fieldcontain">
 				<label for="how_you_found_us">How did you find us?:</label>
 				<select id="how_you_found_us" name="how_you_found_us">
+					<option value="I'm a member">I'm a member</option>
+					<option value="Friend showed me">Friend showed me</option>
+					<option value="Online research">Online research</option>
+					<option value="I'm learning bible study">I'm learning bible study</option>
+					<option value="Someone emailed me">Someone emailed me</option>
+					<option value="Word of Mouth">Word of Mouth</option>				
 				</select>
 			</div>
 			<div data-role="fieldcontain">
 				<label for="captcha">Are you human? *</label>
-				<span id="are_you_human"></span><input type="text" name="captcha" id="captcha" />
+				<span id="are_you_human"></span>
+				<input type="text" name="captcha" id="captcha" />
 			</div>
 			<div data-role="fieldcontain">
 				<fieldset data-role="controlgroup">
@@ -939,40 +944,18 @@
 				</div>
 			</fieldset>
 		</form>
-	</div>
-    
-    <!-- footer -->
-	<!-- <div data-role="footer">
-		<div data-role="navbar" class="custom-icons" data-grid="c"  data-position="fixed">
-			<ul>
-				<li><a href="http://bit.ly/yx2mXZ" id="map" data-icon="custom" data-theme="b">Directions</a></li>
-				<li><a href="tel:18005551234" id="phone" data-icon="custom" data-theme="b">Call Us</a></li>
-				<li><a href="portfolio.html" id="camera" data-icon="custom" data-theme="b" data-ajax="false">Portfolio</a></li>
-				<li><a href="twitter.html" id="twitter2" data-icon="custom" data-theme="b" data-ajax="false">Tweets</a></li>
-			</ul>
-		</div>
-       
-	</div>
-	<!-- /footer -->
-    
+	</div>  
 </div>
-
-
-
-
-
 <!-- after submit -->
-<div data-role="page" id="done">
+<div data-role="page" id="done" data-add-back-btn="true">
 	
     <!-- header -->
-	<div data-role="header" class="page-header" data-add-back-btn="true">
-    	<a  data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" data-rel="back" rel="external" href="#">Back</a>
+	<div data-role="header" class="page-header">
     		<div class="logo"></div>
     	<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
 	</div>
     <!--/header -->
-	
-    
+
     <!-- title -->
   	<h2 class="pageTitle"><span>Success!</span></h2>
     <div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
@@ -986,20 +969,8 @@
 	</div>
     
     <!-- footer -->
-	<div data-role="footer">
-		<div data-role="navbar" class="custom-icons" data-grid="c"  data-position="fixed">
-			<ul>
-				<li><a href="http://bit.ly/yx2mXZ" id="map" data-icon="custom" data-theme="b">Directions</a></li>
-				<li><a href="tel:18005551234" id="phone" data-icon="custom" data-theme="b">Call Us</a></li>
-				<li><a href="portfolio.html" id="camera" data-icon="custom" data-theme="b" data-ajax="false">Portfolio</a></li>
-				<li><a href="twitter.html" id="twitter2" data-icon="custom" data-theme="b" data-ajax="false">Tweets</a></li>
-			</ul>
-		</div>
-       
-	</div>
+	<div data-role="footer"></div>
 	<!-- /footer -->
-    
-    
 </div>
 <!-- /after submit -->
 
