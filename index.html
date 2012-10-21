@@ -17,6 +17,7 @@
 	<script src="assets/slider/jquery.flexslider-min.js"></script>
 	<script src="assets/js/jquery.tweet.js"></script>
 	<script src="assets/js/init.js" type="text/javascript"></script>
+	<script src="assets/js/submit.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
 			document.write('<link rel="stylesheet" href="assets\/add-bubble\/style\/add2home.css">');
@@ -82,7 +83,8 @@
     		<li><a href="#songs" data-prefetch data-transition="none">Praise</a></li>
             <li><a href="#messages" data-transition="none">Featured Messages</a></li>
             <li><a href="#about" data-transition="none">About</a></li>
-            <li><a href="http://www.biblestudyinteractive.com/praise/contact.php" data-prefetch data-transition="none">Contact Us</a></li>
+            <!-- <li><a href="http://www.biblestudyinteractive.com/praise/contact.php" data-prefetch data-transition="none">Contact Us</a></li> -->
+			<li><a href="#contact" data-transition="none">Contact Us</a></li>
         </ul>
         <div class="shadow2box"><img src="assets/images/shadow2.png" class="shadow2" alt="shadow"></div>
         <!-- /navigation -->  
@@ -360,18 +362,15 @@
 				<li><a data-transition="none" href="song-l-loveofprovidence.html" >Love of Providence</a></li>
 				<li><a data-transition="none" href="song-l-loveonceagain.html" >Love once again</a></li>
 				<li><a data-transition="none" href="song-l-lovesong.html" >Love song</a></li>
-				<li><a data-transition="none" href="song-j-jesusiscoming.html" >Jesus is coming</a></li>
-				<li><a data-transition="none" href="song-j-joytotheworld.html" >Joy to the world</a></li>
-				<li><a data-transition="none" href="song-j-justlikethelordsheart.html" >Just like the Lord's heart</a></li>	
             	<li><a data-transition="none" href="song-m-memory.html" >Memory</a></li>
                 <li><a data-transition="none" href="song-m-mission.html" >Mission</a></li>
                 <li><a data-transition="none" href="song-m-mycanaan.html" >My Canaan</a></li>
                 <li><a data-transition="none" href="song-m-myhomewolmyeongdong.html" >My home Wolmyeongdeong</a></li>
                 <li><a data-transition="none" href="song-m-myjoyandmyhope.html" >My Joy and My Hope</a></li>
                 <li><a data-transition="none" href="song-m-mylordwhoshinesintheword.html" >My Lord Who Shines in the Word</a></li>
-                <li><a data-transition="none" href="song-m-mylovewhohascomebysurprise.html" >My Love who has come by surprise</a></li
+                <li><a data-transition="none" href="song-m-mylovewhohascomebysurprise.html" >My Love who has come by surprise</a></li>
                 <li><a data-transition="none" href="song-m-myprayer.html" >My Prayer</a></li>
-                <li><a data-transition="none" href="song-n-nightballadofprovidence.html" >A night ballad of Providence</a></li>
+                <li><a data-transition="none" href="song-n-nightballadofprovidence.html" >Night ballad of Providence</a></li>
                 <li><a data-transition="none" href="song-n-nothingcanstopme.html" >Nothing can stop me</a></li>
                 <li><a data-transition="none" href="song-n-noturningback.html" >No turning back *</a></li>
                 <li><a data-transition="none" href="song-o-ohmygod.html" >Oh my God</a></li>
@@ -387,7 +386,7 @@
                 <li><a data-transition="none" href="song-p-pray.html" >Pray</a></li>
                 <li><a data-transition="none" href="song-p-promise.html" >Promise</a></li>
                 <li><a data-transition="none" href="song-p-providencedew.html" >Providence Dew</a></li>
-                <li><a data-transition="none" href="song-p-providencenews.html" data-trasition="slide">Providence News</a></li>
+                <li><a data-transition="none" href="song-p-providencenews.html">Providence News</a></li>
                 <li><a data-transition="none" href="song-p-providencetrain.html" >Providence Train</a></li>
                 <li><a data-transition="none" href="song-r-reflection.html" >Reflection</a></li>
                 <li><a data-transition="none" href="song-r-rendezvous.html" >Rendezvous</a></li>
@@ -833,7 +832,7 @@
 
 <div data-role="page" id="song" data-add-back-btn="true">
     <!-- header -->
-	<div data-role="header" class="page-header" data-add-back-btn="true">
+	<div data-role="header" class="page-header">
     		<div class="logo"></div>
     	<a href="index.html" data-transition="none" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
 	</div>
@@ -858,5 +857,156 @@
         </div><!-- /content -->
 </div><!-- /page -->
 
+<div data-role="page" id="contact" data-add-back-btn="true">
+    
+    <!-- header -->
+	<div data-role="header" class="page-header" >
+    		<div class="logo"></div>
+		<a href="index.html" data-transition="none" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+	</div>
+    <!--/header -->
+    
+	<!-- banner & title -->
+	<div class="bannerContainer">
+		<img src="assets/images/headers/wmd.jpg" class="banner">	
+    </div>
+  	<h2 class="pageTitle"><span>Contact Us</span></h2>
+	<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
+	<!-- /banner & title -->
+    
+    <!-- main content -->
+    <div data-role="content">
+
+    <p>Fill out the form to contact us today!</p></p>
+    
+		<div id="errors" class="hide ui-corner-all"></div>
+		<p align="right">*</p>
+		<form name="form1" id="callAjaxForm">
+			<div data-role="fieldcontain">
+				<label for="name">First Name: *</label>
+				<input type="text" name="name" id="name" autofocus />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="lastname">Last Name: *</label>
+				<input type="text" name="lastname" id="lastname" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="email">Email: *</label>
+				<input type="text" name="email" id="email" />
+			</div>
+            <div data-role="fieldcontain">
+				<label for="phone">Phone: *</label>
+				<input type="text" name="phone" id="phone" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="subject">Subject:  *</label>
+				<input type="text" name="subject" id="subject" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="message">Message: *</label>
+				<textarea name="message" id="message" rows="8" cols="25"></textarea>
+			</div>
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<legend>Join our Mailing Lists: </legend>
+					<input type="radio" name="mailing_list" id="mailing_list-1" value="yes" checked="checked" />
+					<label for="mailing_list-1">Yes Please</label>
+					<input type="radio" name="mailing_list" id="mailing_list-0" value="no" />
+					<label for="mailing_list-0">No Thanks</label>
+				</fieldset>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="how_you_found_us">How did you find us?:</label>
+				<select id="how_you_found_us" name="how_you_found_us">
+				</select>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="captcha">Are you human? *</label>
+				<span id="are_you_human"></span><input type="text" name="captcha" id="captcha" />
+			</div>
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<label for="copy">Send yourself a copy:</label>
+					<input name="copy" type="checkbox" id="copy" value="y" />
+				</fieldset>
+			</div>
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<button type="reset">Cancel</button>
+				</div>
+				<div class="ui-block-b">
+					<button type="submit" id="submit">Submit</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+    
+    <!-- footer -->
+	<!-- <div data-role="footer">
+		<div data-role="navbar" class="custom-icons" data-grid="c"  data-position="fixed">
+			<ul>
+				<li><a href="http://bit.ly/yx2mXZ" id="map" data-icon="custom" data-theme="b">Directions</a></li>
+				<li><a href="tel:18005551234" id="phone" data-icon="custom" data-theme="b">Call Us</a></li>
+				<li><a href="portfolio.html" id="camera" data-icon="custom" data-theme="b" data-ajax="false">Portfolio</a></li>
+				<li><a href="twitter.html" id="twitter2" data-icon="custom" data-theme="b" data-ajax="false">Tweets</a></li>
+			</ul>
+		</div>
+       
+	</div>
+	<!-- /footer -->
+    
+</div>
+
+
+
+
+
+<!-- after submit -->
+<div data-role="page" id="done">
+	
+    <!-- header -->
+	<div data-role="header" class="page-header" data-add-back-btn="true">
+    	<a  data-icon="arrow-l" data-iconpos="notext" data-direction="reverse" data-rel="back" rel="external" href="#">Back</a>
+    		<div class="logo"></div>
+    	<a href="index.html" data-icon="home" data-iconpos="notext" data-direction="reverse"  rel="external" class="ui-btn-right">Home</a>
+	</div>
+    <!--/header -->
+	
+    
+    <!-- title -->
+  	<h2 class="pageTitle"><span>Success!</span></h2>
+    <div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>
+	<!-- /title -->
+    
+    <div data-role="content">
+		
+        <h4>Your email has been sent successfully!</h4>
+        <p>We will be in touch soon.</p>
+        
+	</div>
+    
+    <!-- footer -->
+	<div data-role="footer">
+		<div data-role="navbar" class="custom-icons" data-grid="c"  data-position="fixed">
+			<ul>
+				<li><a href="http://bit.ly/yx2mXZ" id="map" data-icon="custom" data-theme="b">Directions</a></li>
+				<li><a href="tel:18005551234" id="phone" data-icon="custom" data-theme="b">Call Us</a></li>
+				<li><a href="portfolio.html" id="camera" data-icon="custom" data-theme="b" data-ajax="false">Portfolio</a></li>
+				<li><a href="twitter.html" id="twitter2" data-icon="custom" data-theme="b" data-ajax="false">Tweets</a></li>
+			</ul>
+		</div>
+       
+	</div>
+	<!-- /footer -->
+    
+    
+</div>
+<!-- /after submit -->
+
+
+ 
+
+</body>
+</html>
 </body>
 </html>
