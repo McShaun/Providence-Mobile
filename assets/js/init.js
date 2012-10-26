@@ -1,10 +1,15 @@
 (function(window, $, PhotoSwipe){
-			$(document).ready(function(){
+			$(document).bind('pageinit', function(){
 				//Flexslider
 				$('.flexslider').flexslider({
 					  animation: "slide",
 					  controlsContainer: ".flex-container"
 			    });
+				$(document).bind('pageload', function(event, data){
+					//event.preventDefault();
+					console.log(data.dataUrl);
+					//data.deferred.resolve( data.absUrl, data.options, page );
+				});
 			  //Twitter Feed
 				$(".tweet").tweet({
 					username: "providencego",
