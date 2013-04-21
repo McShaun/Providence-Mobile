@@ -21,14 +21,14 @@
 				});
 				//Loading Gallery Page
 				$('div.gallery-page')
-					.live('pageshow', function(e){
+					.on('pageshow', function(e){
 						var 
 							currentPage = $(e.target),
 							options = {},
 							photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options,  currentPage.attr('id'));
 						return true;
 					})
-					.live('pagehide', function(e){
+					.on('pagehide', function(e){
 						
 						var 
 							currentPage = $(e.target),
